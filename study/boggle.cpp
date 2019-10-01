@@ -14,10 +14,7 @@ bool inRange(int x, int y){
 bool hasword(int x, int y, const string& word){
   if(!inRange(x,y)) return false;
   if(board[x][y] !=word[0] ) return false;
-  if(word.size() ==1 ) {
-    cout<<word<<endl;
-    return true;
-  }
+  if(word.size() ==1 ) return true;
   for(int direction = 0; direction<8; ++direction){
     int nx = x+dx[direction]; int ny = y+dy[direction];
     if(hasword(nx,ny,word.substr(1)))
@@ -51,3 +48,7 @@ int main(){
   }
   return 0;
 }
+
+//유의할점, 완전탐색 , substr(1)로 앞글자 하나 떄고 보냄 이렇게 함으로서 string.size와 depth를 비교할 필요가없음
+//좌표설정을 y,x로 2차원좌표와 맞게 해야할듯. 너무긴 변수명 direction을 di 로 하던지 해야겟음.
+// string ans에 미리 no를 입력해두고 yes가 되면 바꿔주는 식으로 해줌 이로서 yes가 나왔을대 break를 두번할 필요가없음
