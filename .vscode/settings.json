@@ -4,5 +4,8 @@
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
     "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\cmd.exe",
-    "C_Cpp.intelliSenseEngineFallback": "Enabled"
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "files.associations": {
+        "ostream": "cpp"
+    }
 }
